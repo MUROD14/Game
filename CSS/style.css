@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #ffc0cb), color-stop(50%, #fffbd5));
+  background: linear-gradient(to right, #ffc0cb 50%, #fffbd5 50%);
+}
+
+.container {
+  background: #fff;
+  width: 400px;
+  padding: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: 15px 30px 35px #000000b1;
+          box-shadow: 15px 30px 35px #000000b1;
+  border-radius: 10px;
+  -webkit-perspective: 300;
+          perspective: 300;
+}
+
+.stats {
+  text-align: right;
+  color: #101010;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+.coin {
+  height: 150px;
+  width: 150px;
+  margin: 30px auto;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.coin img {
+  width: 145px;
+}
+
+.coin .front, .coin .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.coin .back {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+@-webkit-keyframes spin-back {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(889deg);
+            transform: rotateX(889deg);
+  }
+}
+
+@keyframes spin-back {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(889deg);
+            transform: rotateX(889deg);
+  }
+}
+
+@-webkit-keyframes spin-front {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(1069deg);
+            transform: rotateX(1069deg);
+  }
+}
+
+@keyframes spin-front {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(1069deg);
+            transform: rotateX(1069deg);
+  }
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.buttons button {
+  width: 120px;
+  padding: 8px 0;
+  border: 2px solid #ffc0cb;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.buttons #flip-coin {
+  background: #ffc0cb;
+  color: #fff;
+}
+
+.buttons #flip-coin:hover {
+  background: #fff;
+  color: #ffc0cb;
+}
+
+.buttons #flip-coin:disabled {
+  background: #ececec;
+  border: #e1e1e1;
+  color: #101010;
+  cursor: no-drop;
+}
+
+.buttons #restrat-btn {
+  background: #fff;
+  color: #ffc0cb;
+}
+
+.buttons #restrat-btn:hover {
+  background: #ffc0cb;
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
